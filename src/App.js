@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
+
+const COUNTRIES = ["Afghanistan", 'Armenia', "France"]
 
 function App() {
+  const [base, setBase] = useState()
+  useEffect(() => {
+
+    axios.get("https://covid-api.mmediagroup.fr/v1/cases")
+      .then(response => {
+        debugger
+        setBase(response.data)
+      })
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {base ? Object.values(base).map((it, index) => {
+        if (COUNTRIES.indexOf(it.All.country) !== -1) {
+          return <div key={index}>{it.All.country}</div>;
+        }
+      }) : 'Loading...'}
+      {/* {JSON.stringify(base)} */}
     </div>
   );
 }
