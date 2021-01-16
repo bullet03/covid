@@ -1,31 +1,28 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-
-
-const COUNTRIES = ["Afghanistan", 'Armenia', "France"]
+import { Route, Switch } from "react-router-dom";
+import CountriesList from "./CountriesList";
+import Country from "./Country";
+import Header from "./Header";
+import Comparison from "./Сomparison/Comparison";
+import Footer from './Footer'
 
 function App() {
-  const [base, setBase] = useState()
-  useEffect(() => {
-
-    axios.get("https://covid-api.mmediagroup.fr/v1/cases")
-      .then(response => {
-        debugger
-        setBase(response.data)
-      })
-
-  }, [])
-
   return (
     <div>
-      {base ? Object.values(base).map((it, index) => {
-        if (COUNTRIES.indexOf(it.All.country) !== -1) {
-          return <div key={index}>{it.All.country}</div>;
-        }
-      }) : 'Loading...'}
-      {/* {JSON.stringify(base)} */}
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <CountriesList />
+        </Route>
+        <Route exact path="/comparison">
+          <Comparison />
+        </Route>
+        <Route path="/:id">
+          <Country />
+        </Route>
+      </Switch>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default App
