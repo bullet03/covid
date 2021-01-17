@@ -10,14 +10,14 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path="/">
-          <CountriesList />
-        </Route>
         <Route exact path="/comparison">
           <Comparison />
         </Route>
         <Route path="/:id">
           <Country />
+        </Route>
+        <Route path="/">
+          <CountriesList />
         </Route>
       </Switch>
       <Footer />

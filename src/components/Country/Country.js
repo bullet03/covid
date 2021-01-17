@@ -30,13 +30,14 @@ const Country = () => {
               <div>Population: {it.All.population}</div>
               <div><button type="button" onClick={()=>{setCovDetRation(it.All.confirmed / it.All.deaths)}}>COVID/death ratio</button></div>
               <div><button type="button" onClick={()=>{setPopCovRation(it.All.population / it.All.confirmed)}}>Popualtion/COVID ratio</button></div>
+              <div>{covDetRation}</div>
+              <div>{popCovRation}</div>
             </div>
           );
         }
       }): 'Loading...'}
 
-      <div>{covDetRation}</div>
-      <div>{popCovRation}</div>
+
     </div>
   )
 }

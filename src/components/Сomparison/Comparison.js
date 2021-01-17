@@ -1,7 +1,7 @@
 function Comparison () {
   return (
     <div>
-      hhh
+      It's a block, where countries will be comapred regarding various arguments
     </div>
   )
 }
