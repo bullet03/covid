@@ -10,6 +10,9 @@ function App() {
     <div>
       <Header />
       <Switch>
+        <Route path="/covid">
+          <CountriesList />
+        </Route>
         <Route exact path="/comparison">
           <Comparison />
         </Route>

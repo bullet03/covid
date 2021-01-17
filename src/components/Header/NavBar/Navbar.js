@@ -4,7 +4,7 @@ import styles from './NavBar.module.css'
 function NavBar () {
   return (
     <div className={styles.navbar}>
-      <Link to="/">Main</Link>
+      <Link to="/">Countries List</Link>
       <Link to="/comparison">Comparison</Link>
     </div>
   );
