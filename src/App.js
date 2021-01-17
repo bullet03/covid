@@ -1,9 +1,9 @@
 import { Route, Switch } from "react-router-dom";
-import CountriesList from "./CountriesList";
-import Country from "./Country";
-import Header from "./Header";
-import Comparison from "./Сomparison/Comparison";
-import Footer from './Footer'
+import CountriesList from "./components/CountriesList";
+import Country from "./components/Country";
+import Header from "./components/Header";
+import Comparison from "./components/Сomparison/Comparison";
+import Footer from './components/Footer'
 
 function App() {
   return (
