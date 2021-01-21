@@ -1,0 +1,16 @@
+.pageStructure {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.header {
+  flex: 1 0 auto;
+}

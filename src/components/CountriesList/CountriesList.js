@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import CountryFromList from "./CountryFromList";
+import CountryFromList from "./CountryFromList"
+import { useEffect } from "react"
+import { useSelector, useDispatch } from 'react-redux'
+import { getCountriesList } from '../../redux/reducers/countriesListReducer'
+
 
 function CountriesList () {
-  const [countries, setCountries] = useState();
+
+  const dispatch = useDispatch()
+  const countries = useSelector((store) => store.countriesListReducer.countries);
+
   useEffect(() => {
-    axios.get("https://covid-api.mmediagroup.fr/v1/cases").then((response) => {
-      setCountries(response.data);
-    });
-  }, []);
+    dispatch(getCountriesList())
+  }, [])
 
   return (
     <div>
