@@ -1,5 +1,5 @@
 import axios from "axios"
-const GET_COUNTRIES_LIST = "GET_COUNTRIES_LIST"
+const GET_COUNTRIES = "GET_COUNTRIES"
 
 const COUNTRIES = [
   "Bangladesh",
@@ -14,49 +14,41 @@ const COUNTRIES = [
   "US",
 ]
 
-const initialCountry = [{
-  name: "",
-  deaths: 0,
-  confirmed: 0,
-  popualtion: 0
-}]
-
 const initialState = {
   countries: []
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_COUNTRIES_LIST: {
-      return {
-        ...state,
-        countries: action.countries,
-      };
-    }
-    case 'GET_UGLY': {
-      let array = Object.keys(state).reduce((acc, current, index) => {
-        let {All: {name, deaths, confirmed, population}}  = state[current]
+    case GET_COUNTRIES: {
+      let obj = action.countries;
+      let array = Object.keys(obj).reduce((acc, current ) => {
+        let { All: { deaths, confirmed, population }} = obj[current]
         if (COUNTRIES.includes(current)) {
           return [...acc, {
               name: current,
-              deaths: deaths,
-              confirmed: confirmed,
-              population: population,
+              deaths,
+              cases: confirmed,
+              population,
             },
           ]
         }
-          return acc
+        return acc
       }, [])
+      return {
+        ...state,
+        countries: array,
+      }
     }
     default:
-      return state
+      return state;
   }
 }
 
 export const getCountriesList = () => {
   return (dispatch) => {
     axios.get("https://covid-api.mmediagroup.fr/v1/cases").then((response) => {
-      dispatch({ type: GET_COUNTRIES_LIST, countries: response.data })
+      dispatch({ type: GET_COUNTRIES, countries: response.data });
     })
   }
 }

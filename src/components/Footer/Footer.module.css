@@ -2,3 +2,12 @@
   background: #64AFC4;
   height: 50px;
 }
+
+.footerText {
+  color: white;
+}
+
+.footer .footerText {
+    padding-left: 20px;
+    padding-top: 10px;
+}

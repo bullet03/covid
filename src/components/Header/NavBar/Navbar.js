@@ -5,7 +5,7 @@ function NavBar () {
   return (
     <div className={styles.navbar}>
       <Link to="/">Countries List</Link>
-      <Link to="/comparison">Sort</Link>
+      <Link to="/sort">Sort</Link>
     </div>
   );
 }

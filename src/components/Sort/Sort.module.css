@@ -1,0 +1,49 @@
+.structure {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+table {
+  border: 1px solid rgb(27, 69, 146);
+  border-collapse: collapse;
+  width: 320px;
+}
+
+tr {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #0E5466;
+
+}
+
+.table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tdCenter {
+  text-align: center;
+}
+
+.tdName {
+  width: 30%;
+}
+
+.tdNumber {
+  width: 10%;
+}
+
+.tdCases {
+  width: 25%;
+}
+
+.tdDeaths {
+  width: 20%;
+}
+
+.tdMillions {
+  width: 15%;
+}

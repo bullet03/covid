@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import Country from '../Country'
 import Header from "../Header";
-import Comparison from "../Сomparison";
+import Sort from "../Sort"
 import Footer from '../Footer'
 import CountriesList from "../CountriesList";
 import styles from './MainPage.module.css'
@@ -17,8 +17,8 @@ const MainPage = () => {
           <Route path="/covid/">
             <CountriesList />
           </Route>
-          <Route exact path="/comparison">
-            <Comparison />
+          <Route exact path="/sort">
+            <Sort />
           </Route>
           <Route path="/:id">
             <Country />

@@ -4,11 +4,14 @@
 }
 
 .footer {
-  flex: 0 0 auto;
+  position: fixed;
+  padding: 0px 0px 0px 0px;
+  bottom: 0;
+  width: 100%;
 }
 
 .content {
-  flex: 1 0 auto;
+  align-self: center;
 }
 
 .header {

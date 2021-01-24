@@ -4,3 +4,10 @@
   padding-left: 10px;
   font-size: 22px;
 }
+
+.navbar a:hover {
+  color: #47bbdb;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 22px;
+}

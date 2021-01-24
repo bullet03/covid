@@ -2,13 +2,15 @@ import { useParams } from "react-router-dom"
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import CountryImage from "./CountryImage"
+import styles from './Country.module.css'
+import CountryButtons from "./CountryButtons"
 
 const Country = () => {
 
   const { id } = useParams()
   const [country, setCountry] = useState()
-  const [covDetRation, setCovDetRation] = useState(0)
-  const [popCovRation, setPopCovRation] = useState(0)
+  const [covDetRation, setCovDetRation] = useState()
+  const [popCovRation, setPopCovRation] = useState()
   useEffect(() => {
     axios.get("https://covid-api.mmediagroup.fr/v1/cases")
       .then(response => {
@@ -17,29 +19,54 @@ const Country = () => {
   }, [])
 
 
-  return (
+  return country ? (
     <div>
-      {country ? Object.values(country).map((it, index) => {
+      { Object.values(country).map((it, index) => {
         if(id === it.All.country) {
           return (
             <div key={index}>
-              <CountryImage id={id}/>
-              <div>{it.All.country}</div>
-              <div>Total cases of COVID: {it.All.confirmed}</div>
-              <div>Total deaths: {it.All.deaths}</div>
-              <div>Population: {it.All.population}</div>
-              <div><button type="button" onClick={()=>{setCovDetRation(it.All.confirmed / it.All.deaths)}}>COVID/death ratio</button></div>
-              <div><button type="button" onClick={()=>{setPopCovRation(it.All.population / it.All.confirmed)}}>Popualtion/COVID ratio</button></div>
-              <div>{covDetRation}</div>
-              <div>{popCovRation}</div>
+              <CountryImage id={id} />
+              <table className={styles.table}>
+                <tbody>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Name</td>
+                    <td className={styles.tdBold}>{it.All.country}</td>
+                  </tr>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Total cases of COVID:</td>
+                    <td className={styles.tdBold}>{it.All.confirmed}</td>
+                  </tr>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Total deaths:</td>
+                    <td className={styles.tdBold}>{it.All.deaths}</td>
+                  </tr>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Population:</td>
+                    <td className={styles.tdBold}>{it.All.population}</td>
+                  </tr>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Covid to death</td>
+                    <td className={styles.tdBold}>{covDetRation}</td>
+                  </tr>
+                  <tr className={styles.tr}>
+                    <td className={styles.tdLeft}>Population to COVID</td>
+                    <td className={styles.tdBold}>{popCovRation}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <CountryButtons
+                setPopCovRation={setPopCovRation}
+                setCovDetRation={setCovDetRation}
+                confirmed={it.All.confirmed}
+                deaths={it.All.deaths}
+                population={it.All.population}
+              />
             </div>
           );
         }
-      }): 'Loading...'}
-
-
+      })}
     </div>
-  )
+  ) : 'Loading...'
 }
 
 export default Country
