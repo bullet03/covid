@@ -47,3 +47,7 @@ td {
 .tdMillions {
   width: 15%;
 }
+
+.center {
+  text-align: center;
+}

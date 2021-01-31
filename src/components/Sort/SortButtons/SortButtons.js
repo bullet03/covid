@@ -28,7 +28,7 @@ function SortButtons (props) {
   }
 
   return (
-    <div className={styles.btnGroup}>
+    <div className={styles.btnGroup} >
         <button className={styles.button} onClick={() => sortByCases()}>COVID sort</button>
         <button className={styles.button} onClick={() => sortByDeaths()}>Deaths sort</button>
         <button className={styles.button} onClick={() => sortByPopulation()}>Mln. sort</button>

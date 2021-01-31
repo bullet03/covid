@@ -46,7 +46,7 @@ function Sort () {
   }, [])
 
   return (
-    <div className={styles.structure}>
+    <div className={`${styles.structure} ${styles.center}`}>
       <div className={styles.table}>
         <table>
           <tbody>
