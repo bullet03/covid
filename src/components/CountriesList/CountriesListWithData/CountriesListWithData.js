@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
+import Preloader from "../../PreLoader";
 import style from "./CountriesListWithData.module.css";
 
 const CountriesListWithData = (props) => {
 
   const { countries, loading } = props
 
-  if(loading) {
-    return <h2>Loading...</h2>
-  }
-
-  return (
+  return loading ? (
     <div>
       <div className={style.cards}>
         {countries.map((country) => {
@@ -23,11 +20,11 @@ const CountriesListWithData = (props) => {
                 <div className={style.textCard}>{country.name}</div>
               </div>
             </Link>
-          );
+          )
         })}
       </div>
     </div>
-  )
+  ) : <Preloader />
 }
 
 export default CountriesListWithData;

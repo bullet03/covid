@@ -1,3 +1,4 @@
+import Preloader from '../../PreLoader'
 import styles from './SortedCountries.module.css'
 
 const SortedCountries = (props) => {
@@ -22,7 +23,7 @@ const SortedCountries = (props) => {
         })}
       </div>
     </div>
-  ) : 'Loading...'
+  ) : <Preloader />
 }
 
 export default SortedCountries

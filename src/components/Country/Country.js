@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import CountryImage from "./CountryImage"
 import styles from './Country.module.css'
 import CountryButtons from "./CountryButtons"
+import Preloader from "../PreLoader"
 
 const Country = () => {
 
@@ -66,7 +67,7 @@ const Country = () => {
         }
       })}
     </div>
-  ) : 'Loading...'
+  ) : <Preloader />
 }
 
 export default Country

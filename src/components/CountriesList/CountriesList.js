@@ -26,7 +26,7 @@ function CountriesList () {
 
   return (
     <div>
-      <CountriesListWithData countries={currentCountries} />
+      <CountriesListWithData countries={currentCountries} loading={loading}/>
       <Pagination
         countriesPerPage={countriesPerPage}
         totalCountries={countries.length}
