@@ -6,11 +6,13 @@ One can get statistic of each country or see them in comparison to each other.
 
 <a href="https://bullet03.github.io/covid/">DEMO<a>
 
-React v17 (CRA)
-Routing
-Redux
-thunk
-CSS modules
+<img src="./src/assets/screenshot.png" alt="screenshot"/>
+
+- React v17 (CRA)
+- Routing
+- Redux
+- thunk
+- CSS modules
 
 ### To Run Locally
 
