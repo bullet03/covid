@@ -26,7 +26,7 @@ const CountryImage = (props) => {
 
   return abbreviation ? (
 
-      <img className={styles} alt="" src={`https://flagcdn.com/256x192/${abbreviation}.png`} />
+      <img className={styles.image} alt="" src={`https://flagcdn.com/256x192/${abbreviation}.png`} />
 
   ) : "Loading..."
 }
