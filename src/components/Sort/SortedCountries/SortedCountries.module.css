@@ -1,6 +1,7 @@
-table {
+.tableItself {
   border: 1px solid #0E5466;
   border-collapse: collapse;
+  width: 360px;
 }
 
 tr {
@@ -26,7 +27,7 @@ td {
 }
 
 .tdName {
-  width: 30%;
+  width: 32%;
 }
 
 .tdNumber {
@@ -42,5 +43,5 @@ td {
 }
 
 .tdMillions {
-  width: 15%;
+  width: 13%;
 }

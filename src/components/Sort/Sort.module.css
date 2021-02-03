@@ -4,20 +4,19 @@
   align-self: center;
 }
 
-table {
+.tableItself {
   border: 1px solid rgb(27, 69, 146);
   border-collapse: collapse;
-  width: 320px;
+  width: 360px;
 }
 
-tr {
+/* tr {
   border-collapse: collapse;
 }
 
 td {
   border: 1px solid #0E5466;
-
-}
+} */
 
 .table {
   margin-top: 20px;
@@ -29,7 +28,7 @@ td {
 }
 
 .tdName {
-  width: 30%;
+  width: 32%;
 }
 
 .tdNumber {
@@ -45,7 +44,7 @@ td {
 }
 
 .tdMillions {
-  width: 15%;
+  width: 13%;
 }
 
 .center {

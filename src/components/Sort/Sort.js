@@ -48,7 +48,7 @@ function Sort () {
   return (
     <div className={`${styles.structure} ${styles.center}`}>
       <div className={styles.table}>
-        <table>
+        <table className={styles.tableItself}>
           <tbody>
             <tr>
               <td className={`${styles.tdCenter} ${styles.tdName}`}>Country</td>

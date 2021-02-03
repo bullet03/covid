@@ -8,7 +8,7 @@ const SortedCountries = (props) => {
       <div className={styles.table}>
         {countries.map((country, index) => {
           return (
-            <table key={country.name} className={styles}>
+            <table key={country.name} className={styles.tableItself}>
               <tbody>
                 <tr>
                   <td  className={`${styles.tdName} ${styles.tdCenter}`} style={{fontWeight: 'bold', color: "#36485a"}}>{country.name}</td>
