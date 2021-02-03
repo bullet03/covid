@@ -1,9 +1,11 @@
-import preloader from '../../assets/preloader.svg'
+import styles from './Preloader.module.css'
 
 const Preloader = () => {
   return (
-    <div>
-      <img src={preloader} alt="spinner" />
+    <div className={styles.loadingioSpinner}>
+      <div className={styles.ldioYpkv8uiq5pc}>
+        <div></div>
+      </div>
     </div>
   )
 }
