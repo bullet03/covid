@@ -3,6 +3,7 @@ import Pagination from './Pagination'
 import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import { getCountriesList } from '../../redux/reducers/countriesListReducer'
+import styles from './CountriesList.module.css'
 
 function CountriesList () {
 
@@ -26,14 +27,14 @@ function CountriesList () {
 
   return (
     <div>
-      <CountriesListWithData countries={currentCountries} loading={loading}/>
+      <CountriesListWithData countries={currentCountries} loading={loading} />
       <Pagination
         countriesPerPage={countriesPerPage}
         totalCountries={countries.length}
         paginate={paginate}
       />
     </div>
-  );
+  )
 }
 
 export default CountriesList

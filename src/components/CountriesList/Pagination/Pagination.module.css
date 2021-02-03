@@ -14,7 +14,7 @@
   border: 1px solid #ddd;
 }
 
-.pagination a.act {
+.pagination a.active {
   background-color: #47a3c7;
   color: white;
   border: 1px solid #296c86;

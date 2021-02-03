@@ -1,5 +1,6 @@
 import styles from "./CountryImage.module.css"
 import { useEffect, useState } from 'react'
+import Preloader from "../../PreLoader"
 
 const COUNTRIES_LIST = [
   {Bangladesh: "bd"},
@@ -24,11 +25,14 @@ const CountryImage = (props) => {
     })
   }, [])
 
-  return abbreviation ? (
+  if(!abbreviation) {
+    return <Preloader />
+  }
 
+
+  return (
       <img className={styles.image} alt="" src={`https://flagcdn.com/256x192/${abbreviation}.png`} />
-
-  ) : "Loading..."
+  )
 }
 
 export default CountryImage

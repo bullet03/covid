@@ -3,7 +3,12 @@ import styles from './SortedCountries.module.css'
 
 const SortedCountries = (props) => {
   const { countries, color } = props
-  return countries ? (
+
+  if(!countries) {
+    return <Preloader />
+  }
+
+  return (
     <div>
       <div className={styles.table}>
         {countries.map((country, index) => {
@@ -23,7 +28,7 @@ const SortedCountries = (props) => {
         })}
       </div>
     </div>
-  ) : <Preloader />
+  )
 }
 
 export default SortedCountries

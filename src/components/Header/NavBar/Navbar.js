@@ -7,7 +7,7 @@ function NavBar () {
       <Link to="/">Countries List</Link>
       <Link to="/sort">Sort</Link>
     </div>
-  );
+  )
 }
 
 export default NavBar

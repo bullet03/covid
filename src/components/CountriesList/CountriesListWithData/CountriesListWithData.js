@@ -6,7 +6,11 @@ const CountriesListWithData = (props) => {
 
   const { countries, loading } = props
 
-  return loading ? (
+  if (!loading) {
+    return <Preloader />
+  }
+
+  return (
     <div>
       <div className={style.cards}>
         {countries.map((country) => {
@@ -24,7 +28,7 @@ const CountriesListWithData = (props) => {
         })}
       </div>
     </div>
-  ) : <Preloader />
+  )
 }
 
 export default CountriesListWithData;

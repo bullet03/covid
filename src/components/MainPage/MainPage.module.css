@@ -1,6 +1,7 @@
 .pageStructure {
   display: flex;
   flex-direction: column;
+
 }
 
 .footer {
@@ -12,6 +13,7 @@
 
 .content {
   align-self: center;
+  margin-bottom: 50px;
 }
 
 .header {

@@ -23,7 +23,7 @@ const Pagination = (props) => {
               }}
               href="#"
               key={number}
-              className={`${number === active ? "act" : ""}`}
+              className={`${number === active ? styles.active : ""}`}
             >
               {number}
             </a>
