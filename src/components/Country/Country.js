@@ -19,8 +19,11 @@ const Country = () => {
       })
   }, [])
 
+  if(!country) {
+    return <Preloader />
+  }
 
-  return country ? (
+  return (
     <div>
       { Object.values(country).map((it, index) => {
         if(id === it.All.country) {
@@ -67,7 +70,7 @@ const Country = () => {
         }
       })}
     </div>
-  ) : <Preloader />
+  ) 
 }
 
 export default Country
