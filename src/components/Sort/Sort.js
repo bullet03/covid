@@ -80,9 +80,11 @@ function reducer(state, action) {
   }
 }
 
+
+
 function Sort () {
 
-  const [countriesReducer, dispatch] = useReducer(reducer, initialState);
+  const [countriesReducer, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     axios.get("https://covid-api.mmediagroup.fr/v1/cases")
@@ -108,7 +110,10 @@ function Sort () {
             </tr>
           </tbody>
         </table>
-        <SortedCountries countries={countriesReducer.countries} color={countriesReducer.color} />
+        <SortedCountries
+          countries={countriesReducer.countries}
+          color={countriesReducer.color}
+        />
       </div>
       <div>
         <SortButtons dispatch={dispatch} />

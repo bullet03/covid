@@ -1,13 +1,7 @@
-import styles from './Preloader.module.css'
+import preloader from '../../assets/preloader.svg'
 
 const Preloader = () => {
-  return (
-    <div className={styles.loadingioSpinner}>
-      <div className={styles.ldioYpkv8uiq5pc}>
-        <div></div>
-      </div>
-    </div>
-  )
+  return <div><img src={preloader} alt="Loading..."/></div>
 }
 
 export default Preloader
