@@ -12,6 +12,7 @@ const Country = () => {
   const [country, setCountry] = useState()
   const [covDetRation, setCovDetRation] = useState()
   const [popCovRation, setPopCovRation] = useState()
+  
   useEffect(() => {
     axios.get("https://covid-api.mmediagroup.fr/v1/cases")
       .then(response => {
@@ -70,7 +71,7 @@ const Country = () => {
         }
       })}
     </div>
-  ) 
+  )
 }
 
 export default Country
