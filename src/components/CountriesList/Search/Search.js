@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import styles from './Search.module.css'
 
 const Search = (props) => {
 
@@ -10,12 +11,12 @@ const Search = (props) => {
   }
 
   return (
-    <div>
-      <button type="button" onClick={handleClick}>
+    <div className={styles.center}>
+      <button className={styles.button} type="button" onClick={handleClick}>
         Find Country
       </button>
-      <input type="text" onChange={(e) => setReference(e.target.value)} placeholder="e.g. Bangladesh etc."/>
+      <input className={styles.input} type="text" onChange={(e) => setReference(e.target.value)} placeholder="e.g. Bangladesh etc."/>
     </div>
-  );
+  )
 }
 export default Search
