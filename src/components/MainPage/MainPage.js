@@ -9,11 +9,11 @@ import styles from './MainPage.module.css'
 
 const MainPage = () => {
   return (
-    <div className={styles.pageStructure}>
-      <div className={styles.header}>
+    <div className={styles.wrapper}>
+      <header className={styles.header}>
         <Header />
-      </div>
-      <div className={styles.content}>
+      </header>
+      <main className={styles.content}>
         <Switch>
           <Route path="/covid/">
             <CountriesList />
@@ -28,10 +28,10 @@ const MainPage = () => {
             <CountriesList />
           </Route>
         </Switch>
-      </div>
-      <div className={styles.footer}>
+      </main>
+      <footer className={styles.footer}>
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 }

@@ -12,9 +12,8 @@ const Pagination = (props) => {
   }
 
   return (
-    <div className={styles.center}>
       <div className={styles.pagination}>
-        {pageNumbers.map((number, index) => {
+        {pageNumbers.map((number) => {
           return (
             <a
               onClick={() => {
@@ -30,7 +29,6 @@ const Pagination = (props) => {
           );
         })}
       </div>
-    </div>
   );
 }
 

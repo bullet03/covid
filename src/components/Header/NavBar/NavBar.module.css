@@ -1,13 +1,17 @@
 .navbar a {
+  display: inline-block;
   color: white;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
   font-size: 22px;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .navbar a:hover {
   color: #47bbdb;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 22px;
 }

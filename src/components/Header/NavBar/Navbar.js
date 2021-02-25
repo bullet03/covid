@@ -3,11 +3,11 @@ import styles from './NavBar.module.css'
 
 function NavBar () {
   return (
-    <div className={styles.navbar}>
+    <nav className={styles.navbar}>
       <Link to="/">Countries List</Link>
       <Link to="/sort">Sort</Link>
-    </div>
-  )
+    </nav>
+  );
 }
 
 export default NavBar

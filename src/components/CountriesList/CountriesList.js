@@ -27,7 +27,7 @@ function CountriesList () {
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
-    <div>
+    <section className={styles.wrapper}>
       <CountriesListWithData countries={currentCountries} loading={loading} />
       <Search reference={reference} setReference={setReference} />
       <Pagination
@@ -35,8 +35,8 @@ function CountriesList () {
         totalCountries={countries.length}
         paginate={paginate}
       />
-    </div>
-  )
+    </section>
+  );
 }
 
 export default CountriesList

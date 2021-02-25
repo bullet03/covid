@@ -11,7 +11,6 @@ const CountriesListWithData = (props) => {
   }
 
   return (
-    <div>
       <div className={style.cards}>
         {countries.map((country) => {
           return (
@@ -20,14 +19,11 @@ const CountriesListWithData = (props) => {
               key={country.name}
               className={style.link}
             >
-              <div className={style.countryCard}>
-                <div className={style.textCard}>{country.name}</div>
-              </div>
+              <div className={style.countryCard}>{country.name}</div>
             </Link>
           )
         })}
       </div>
-    </div>
   )
 }
 

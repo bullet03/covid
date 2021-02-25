@@ -1,21 +1,18 @@
-.pageStructure {
+.wrapper {
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
+  height: 100vh;
 }
 
-.footer {
-  position: fixed;
-  padding: 0px 0px 0px 0px;
-  bottom: 0;
-  width: 100%;
+body {
+  margin: 0;
+  height: 100%;
 }
 
 .content {
-  align-self: center;
-  margin-bottom: 50px;
-}
-
-.header {
-  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
