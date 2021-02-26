@@ -11,7 +11,7 @@ function CountriesList () {
   const dispatch = useDispatch()
   const countries = useSelector((store) => store.countriesListReducer.countries)
   const [currentPage, setCurrentPage] = useState(1)
-  const [countriesPerPage, setCountriesPerPagePerPage] = useState(4)
+  const [countriesPerPage] = useState(4)
   const [loading, setLoading] = useState(false)
   const [reference, setReference] = useState(1);
 

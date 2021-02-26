@@ -9,7 +9,6 @@ const SortedCountries = (props) => {
   }
 
   return (
-    <div>
       <div className={styles.table}>
         {countries.map((country, index) => {
           return (
@@ -27,7 +26,6 @@ const SortedCountries = (props) => {
           );
         })}
       </div>
-    </div>
   )
 }
 

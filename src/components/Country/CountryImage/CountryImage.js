@@ -1,19 +1,7 @@
 import styles from "./CountryImage.module.css"
 import { useEffect, useState } from 'react'
 import Preloader from "../../PreLoader"
-
-const COUNTRIES_LIST = [
-  {Bangladesh: "bd"},
-  {Brazil: "br"},
-  {China: "cn"},
-  {India: "in"},
-  {Indonesia: "id"},
-  {Mexico: 'mx'},
-  {Nigeria: "ng"},
-  {Pakistan: "pk"},
-  {Russia: "ru"},
-  {US: "us"}
-]
+import { COUNTRIES_LIST } from '../../../consts/consts'
 
 const CountryImage = (props) => {
   const [abbreviation, setAbbreviation] = useState()
@@ -31,7 +19,7 @@ const CountryImage = (props) => {
 
 
   return (
-      <img className={styles.image} alt="" src={`https://flagcdn.com/256x192/${abbreviation}.png`} />
+      <img className={styles.image} alt="country_image" src={`https://flagcdn.com/256x192/${abbreviation}.png`} />
   )
 }
 

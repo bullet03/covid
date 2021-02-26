@@ -1,18 +1,7 @@
 import axios from "axios"
+import { COUNTRIES } from "../../consts";
 const GET_COUNTRIES = "GET_COUNTRIES"
 
-const COUNTRIES = [
-  "Bangladesh",
-  "Brazil",
-  "China",
-  "India",
-  "Indonesia",
-  "Mexico",
-  "Nigeria",
-  "Pakistan",
-  "Russia",
-  "US",
-]
 
 const initialState = {
   countries: []

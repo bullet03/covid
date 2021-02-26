@@ -3,19 +3,7 @@ import { useEffect, useReducer } from "react";
 import SortButtons from './SortButtons/SortButtons'
 import SortedCountries from './SortedCountries/SortedCountries'
 import styles from './Sort.module.css'
-
-const COUNTRIES = [
-  "Bangladesh",
-  "Brazil",
-  "China",
-  "India",
-  "Indonesia",
-  "Mexico",
-  "Nigeria",
-  "Pakistan",
-  "Russia",
-  "US",
-]
+import { COUNTRIES } from '../../consts'
 
 const initialState = {
   countries: [],

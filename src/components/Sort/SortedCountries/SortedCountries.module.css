@@ -4,6 +4,8 @@
   width: 360px;
 }
 
+table,
+td,
 tr {
   border-collapse: collapse;
 }
@@ -19,8 +21,6 @@ td {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
 
 .tdCenter {
   text-align: center;
