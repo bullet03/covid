@@ -6,7 +6,7 @@ One can get statistic of each country or see them in comparison to each other.
 
 <a href="https://bullet03.github.io/covid/">DEMO<a>
 
-<img src="./src/assets/screenshot.png" alt="screenshot"/>
+<img src="./src/assets/screen.png" alt="screenshot"/>
 
 - React v17 (CRA)
 - Routing
