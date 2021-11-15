@@ -2,7 +2,7 @@
 
 The App grabs a list of countries from the server (via COVIAPI) and takes 10 most populated ones in the world.
 
-One can get statistic of each country or see them in comparison to each other.
+You can get statistic of each country or see them in comparison to each other.
 
 <a href="https://bullet03.github.io/covid/">DEMO<a>
 
